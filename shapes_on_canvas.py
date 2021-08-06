@@ -52,57 +52,7 @@ starty.insert(0," ")
 endx.insert(0," ")
 endy.insert(0," ")
 draw=""
-def rectangle(event):
-    global draw
-    global starx
-    global stary
-    global enx
-    global eny
-    global color
-    color=colour_get.get()
-    drawing="rect"
-    starx=startx_get.get()
-    stary=starty_get.get()
-    enx=endx_get.get()
-    eny=endy_get.get()
-    draw(drawing,stary,starx,enx,eny,color)
-def circle(event):
-    global draw
-    global starx
-    global stary
-    global enx
-    global eny
-    global color
-    color=colour_get.get()
-    drawing="circle"
-    starx=startx_get.get()
-    stary=starty_get.get()
-    enx=endx_get.get()
-    eny=endy_get.get()
-    draw(drawing,stary,enx,starx,eny,color)
-def line(event):
-    global draw
-    global starx
-    global stary
-    global enx
-    global eny
-    global color
-    color=colour_get.get()
-    drawing="line"
-    starx=startx_get.get()
-    stary=starty_get.get()
-    enx=endx_get.get()
-    eny=endy_get.get()
-    draw(drawing,stary,enx,starx,eny,color)
-def draw(drawing,stary,starx,enx,eny,color):
-    if(color==""):
-        color="black"
-    if(drawing=="rect"):
-        canvas.create_rectangle(stary,starx,enx,eny,fill=color,width=3)
-    elif(drawing=="circle"):
-        canvas.create_oval(starx,stary,enx,eny,fill=color,width=3)
-    elif(drawing=="line"):
-        canvas.create_line(starx,stary,enx,eny,fill=color,width=3)
+
 root.bind("<r>",rectangle)
 root.bind("<c>",circle)
 root.bind("<l>",line)
